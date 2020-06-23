@@ -1,7 +1,7 @@
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
-  -name: php pod
+  name: php-pod
 
 spec:
   containers:
