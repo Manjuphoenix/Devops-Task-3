@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: php-pod
-
-spec:
-  containers:
-  - name: php
-    image: docker pull vimal13/apache-webserver-php
