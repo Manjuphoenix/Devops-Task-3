@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+name: replcaset
+spec:
+  replicas: 3
+  selectors:
+    matchLabels:
+      env: testing
+  template:
+    metadata:
+      name: webpod
+      labels:
+        env: testing
+    spec:
+      containers:
+      - name: webpod
+        image: manjumich/html:v3
+
