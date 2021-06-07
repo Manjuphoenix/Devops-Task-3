@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-byteintellect-a
+spec:
+  rules:
+  - host: users-int.byteintellect.com
+    http:
+      paths:
+      - path: /user_svc
+        backend:
+          serviceName: user-svc
+          servicePort: 7001
+  - host: auth-ext.byteintellect.com
+    http:
+      paths:
+      - path: /auth_svc
+        backend:
+          serviceName: auth-svc
+          servicePort: 7101
