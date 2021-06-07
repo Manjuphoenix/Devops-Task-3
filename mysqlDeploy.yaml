@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mysql-deploy
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       env: testing
@@ -24,4 +24,6 @@ spec:
           value: "true"
         - name: MYSQL_RANDOM_ROOT_PASSWORD
           value: "false"
-
+        ports:
+        - containerPort: 3306
+          name: mysql
