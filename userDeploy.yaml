@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usersvc-deployment
+  labels:
+    app: usersvc
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: usersvc
+  template:
+    metadata:
+      labels:
+        app: usersvc
+    spec:
+      containers:
+      - name: usersvc
+        image: manjumich/user_svc
